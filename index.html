@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>음료 자판기</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="title">음료 자판기</h1>
+      </header>
+
+      <section class="vending-machine">
+        <div class="product-selection">
+          <h2>제품 선택</h2>
+          <div class="products">
+            <button class="product coke">
+              <div class="product-image">🥤</div>
+              <div class="product-name">콜라</div>
+              <div class="product-price">1,100원</div>
+            </button>
+            <button class="product water">
+              <div class="product-image">💧</div>
+              <div class="product-name">물</div>
+              <div class="product-price">600원</div>
+            </button>
+            <button class="product coffee">
+              <div class="product-image">☕</div>
+              <div class="product-name">커피</div>
+              <div class="product-price">700원</div>
+            </button>
+          </div>
+          <div class="selected-products"></div>
+          <div class="product-actions">
+            <button class="cancel-button">선택 취소</button>
+            <button class="reset-button">전체 취소</button>
+          </div>
+        </div>
+
+        <div class="payment-section">
+          <div class="cash-input">
+            <h2>현금 투입</h2>
+            <div class="cash-buttons">
+              <button class="cash-button" data-value="100">100원</button>
+              <button class="cash-button" data-value="500">500원</button>
+              <button class="cash-button" data-value="1000">1,000원</button>
+              <button class="cash-button" data-value="5000">5,000원</button>
+              <button class="cash-button" data-value="10000">10,000원</button>
+            </div>
+            <div class="cash-display"></div>
+            <button class="cash-return">현금 반환</button>
+          </div>
+
+          <div class="card-input">
+            <h2>카드 결제</h2>
+            <div class="card-status">카드 상태: <span>미삽입</span></div>
+            <button class="card-insert">카드 넣기/빼기</button>
+          </div>
+        </div>
+
+        <div class="payment-buttons">
+          <button class="payment-cash">현금 결제</button>
+          <button class="payment-card">카드 결제</button>
+        </div>
+
+        <div class="payment-status">
+          <div class="total-amount"></div>
+          <div class="change-amount"></div>
+          <button class="get-change hidden">거스름돈 받기</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
